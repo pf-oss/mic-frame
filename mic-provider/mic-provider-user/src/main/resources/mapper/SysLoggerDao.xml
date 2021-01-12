@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mic.dao.SysLoggerDao">
+
+    <resultMap type="com.mic.model.bean.SysLogger" id="SysLoggerMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="applicationName" column="application_name" jdbcType="VARCHAR"/>
+        <result property="className" column="class_name" jdbcType="VARCHAR"/>
+        <result property="methodName" column="method_name" jdbcType="VARCHAR"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="clientId" column="client_id" jdbcType="VARCHAR"/>
+        <result property="operation" column="operation" jdbcType="VARCHAR"/>
+        <result property="timestamp" column="timestamp" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+</mapper>

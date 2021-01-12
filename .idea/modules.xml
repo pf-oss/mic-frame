@@ -13,8 +13,9 @@
       <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-swagger/mic-common-swagger.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-swagger/mic-common-swagger.iml" group="mic-common and modules" />
       <module fileurl="file://$PROJECT_DIR$/mic-frame.iml" filepath="$PROJECT_DIR$/mic-frame.iml" />
       <module fileurl="file://$PROJECT_DIR$/mic-gateway/mic-gateway.iml" filepath="$PROJECT_DIR$/mic-gateway/mic-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider.iml" group="mic-provider and modules" />
       <module fileurl="file://$PROJECT_DIR$/mic-provider-api/mic-provider-api.iml" filepath="$PROJECT_DIR$/mic-provider-api/mic-provider-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider-user/mic-provider-user.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider-user/mic-provider-user.iml" group="mic-provider and modules" />
       <module fileurl="file://$PROJECT_DIR$/mic-user-center/mic-user-center.iml" filepath="$PROJECT_DIR$/mic-user-center/mic-user-center.iml" />
     </modules>
   </component>

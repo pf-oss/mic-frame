@@ -11,7 +11,18 @@
     <artifactId>mic-provider</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>mic-provider-user</module>
+    </modules>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
+        </dependency>
+    </dependencies>
 
 
 
