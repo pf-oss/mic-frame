@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mic-common-base" />
+        <module name="mic-common-db" />
+        <module name="mic-common-elasticsearch" />
+        <module name="mic-common-log" />
+        <module name="mic-common-redis" />
+        <module name="mic-common-ribbon" />
+        <module name="mic-common-security-core" />
+        <module name="mic-common-swagger" />
+        <module name="mic-gateway" />
+        <module name="mic-user-center" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mic-common" target="1.5" />
+      <module name="mic-common-base" target="1.8" />
+      <module name="mic-common-db" target="1.8" />
+      <module name="mic-common-elasticsearch" target="1.8" />
+      <module name="mic-common-log" target="1.8" />
+      <module name="mic-common-redis" target="1.8" />
+      <module name="mic-common-ribbon" target="1.8" />
+      <module name="mic-common-security-core" target="1.8" />
+      <module name="mic-common-swagger" target="1.8" />
+      <module name="mic-frame" target="1.5" />
+      <module name="mic-gateway" target="1.8" />
+      <module name="mic-provider" target="1.5" />
+      <module name="mic-provider-api" target="1.5" />
+      <module name="mic-user-center" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

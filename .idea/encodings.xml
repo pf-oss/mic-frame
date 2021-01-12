@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-security-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-common/mic-common-swagger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-user-center" charset="UTF-8" />
+  </component>
+</project>

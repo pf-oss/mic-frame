@@ -1,0 +1,13 @@
+package com.mic.miccommonlog;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class MicCommonLogApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
