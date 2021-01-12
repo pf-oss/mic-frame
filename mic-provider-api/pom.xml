@@ -11,5 +11,8 @@
     <packaging>pom</packaging>
     <artifactId>mic-provider-api</artifactId>
 
+    <modules>
+        <module>mic-provider-user-api</module>
+    </modules>
 
 </project>

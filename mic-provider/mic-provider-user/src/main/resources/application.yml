@@ -1,9 +1,17 @@
 spring:
+  application:
+    name: mic-provider-user
   datasource:
     url: jdbc:mysql://localhost:3306/mic-frame?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
+  cloud:
+    nacos:
+      discovery:
+        service: ${spring.application.name}
+    discovery:
+    server-addr: 127.0.0.1:8848
 
 server:
   port: 8090

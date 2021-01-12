@@ -10,7 +10,10 @@
     <file url="file://$PROJECT_DIR$/mic-common/mic-common-security-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-common/mic-common-swagger" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-provider-api/mic-provider-user-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-provider/mic-provider-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-provider/mic-provider-user/src/main/resources/application.yml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/mic-user-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-user-center/src/main/resources/application.yml" charset="GBK" />
   </component>
 </project>

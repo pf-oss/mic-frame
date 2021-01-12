@@ -1,0 +1,25 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: mic-user-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: ${spring.application.name}
+
+#logging:
+#  level:
+#    com.feign.consumerdemo1.feign: DEBUG
+
+feign:
+  # Feign Apache HttpClient 配置项，对应 FeignHttpClientProperties 配置属性类
+  httpclient:
+    enabled: false # 是否开启。默认为 true
+    max-connections: 200 # 最大连接数。默认为 200
+    max-connections-per-route: 50 # 每个路由的最大连接数。默认为 50。router = host + port
+    connection-timeout: 1
+  okhttp:
+    enabled: true
