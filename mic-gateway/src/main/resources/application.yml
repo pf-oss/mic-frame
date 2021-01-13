@@ -1,0 +1,35 @@
+server:
+  port: 8093
+
+
+spring:
+  application:
+    name: mic-gateway
+  cloud:
+    ## nacos 配置
+    nacos:
+      discovery:
+        service: ${spring.application.name}
+        server-addr: 127.0.0.1:8848
+
+    ## gateway配置
+    gateway:
+      # 路由配置项，对应 RouteDefinition 数组
+      routes:
+      - id: mic-user-center # 路由的编号
+        uri: lb://mic-user-center # 路由到的目标地址
+        predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+        - Path=/query/demo/test
+        filters:
+        - StripPrefix=1
+      - id: oschina # 路由的编号
+        uri: lb://mic-provider-user # 路由的目标地址
+        predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+        - Path=/query/test/getUser
+        filters: # 过滤器，对请求进行拦截，实现自定义的功能，对应 FilterDefinition 数组
+        - StripPrefix=1
+
+logging:
+  level:
+    reactor.netty: DEBUG
+    org.springframework.cloud.gateway: INFO   # TRACE
