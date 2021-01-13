@@ -2,6 +2,8 @@ package com.mic.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.mic.service.UserService;
+import com.mic.utils.RedisRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,9 +22,20 @@ public class TestController {
     @Resource
     private UserService userService;
 
+    @Autowired
+    private RedisRepository redisRepository;
+
     @GetMapping("/test")
     public String getUser() {
        return JSON.toJSONString(userService.getUser());
     }
+
+
+    @GetMapping("/redis")
+    public String getRedis() {
+        redisRepository.setStr("1", "张三");
+       return redisRepository.getStr("1");
+    }
+
 
 }

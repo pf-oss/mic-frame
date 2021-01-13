@@ -21,13 +21,13 @@ pagehelper:
 
 mybatis-plus:
   mapper-locations: "classpath*:/mapper/**/*.xml"
-  type-aliases-package: com.mic.model.bean # ɨ��İ�·��
+  type-aliases-package: com.mic.model.bean # 扫描的包路径
   global-config:
-    banner: false # �رմ�ӡmybatis-plus��LOGO
+    banner: false # 关闭打印mybatis-plus的LOGO
     db-config:
       logicDeleteField: deleted
-      logic-delete-value: 1 # �߼���ɾ��ֵ(Ĭ��Ϊ 1)
-      logic-not-delete-value: 0 # �߼�δɾ��ֵ(Ĭ��Ϊ 0)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

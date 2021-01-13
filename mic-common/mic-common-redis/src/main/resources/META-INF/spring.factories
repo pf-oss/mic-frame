@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.mic.config.CacheConfig,\
+com.mic.config.RedisConfigure,\
+com.mic.utils.RedisRepository

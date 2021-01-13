@@ -58,6 +58,12 @@
             <version>2.2.3.RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.mic</groupId>
+            <artifactId>mic-common-redis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
