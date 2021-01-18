@@ -1,9 +1,11 @@
 package com.mic.store;
 
-import com.mic.properties.SecurityProperties;
+import com.mic.config.serializer.FastjsonRedisTokenStoreSerializationStrategy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 /**
  *  认证服务器使用Redis存取令牌
@@ -14,8 +16,15 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @ConditionalOnProperty(prefix = "mic.oauth2.token.store", name = "type", havingValue = "redisAndJson", matchIfMissing = true)
 public class AuthRedisTokenStoreJson {
 
+
+    @Autowired
+    private RedisConnectionFactory redisConnectionFactory;
+
     @Bean
-    public TokenStore tokenStore(SecurityProperties securityProperties) {
-        return new CustomRedisTokenStoreJson(securityProperties);
+    public RedisTokenStore redisTokenStore(){
+        RedisTokenStore store = new RedisTokenStore(redisConnectionFactory);
+        //自定义json进行序列化和反序列化
+        store.setSerializationStrategy(new FastjsonRedisTokenStoreSerializationStrategy());
+        return store;
     }
 }

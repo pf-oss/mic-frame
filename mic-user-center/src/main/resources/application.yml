@@ -42,7 +42,7 @@ mic:
   oauth2:
     token:
       store:
-        type: redisAndJson
+        type: redis
 
   tenant:
     enable: false

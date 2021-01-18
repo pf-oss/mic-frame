@@ -81,7 +81,7 @@ mic:
   oauth2:
     token:
       store:
-        type: redisAndJson
+        type: redis
   security:
     ignore:
       # 忽略认证的地址

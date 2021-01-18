@@ -1,5 +1,6 @@
 package com.mic.store;
 
+import com.mic.config.serializer.FastjsonRedisTokenStoreSerializationStrategy;
 import com.mic.constant.constant.SecurityConstants;
 import com.mic.properties.SecurityProperties;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,6 @@ import org.springframework.security.oauth2.provider.OAuth2Request;
 import org.springframework.security.oauth2.provider.token.AuthenticationKeyGenerator;
 import org.springframework.security.oauth2.provider.token.DefaultAuthenticationKeyGenerator;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.redis.JdkSerializationStrategy;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStoreSerializationStrategy;
 import org.springframework.util.ClassUtils;
@@ -48,7 +48,8 @@ public class CustomRedisTokenStore implements TokenStore {
     private final RedisConnectionFactory connectionFactory;
     private AuthenticationKeyGenerator authenticationKeyGenerator = new DefaultAuthenticationKeyGenerator();
 //    private RedisTokenStoreSerializationStrategy serializationStrategy = new JdkSerializationStrategy();
-    private RedisTokenStoreSerializationStrategy serializationStrategy = new JdkSerializationStrategy();
+//    private RedisTokenStoreSerializationStrategy serializationStrategy = new JdkSerializationStrategy();
+    private RedisTokenStoreSerializationStrategy serializationStrategy = new FastjsonRedisTokenStoreSerializationStrategy();
 
     private String prefix = "";
 
