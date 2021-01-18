@@ -1,9 +1,9 @@
 package com.mic.model.dto;
 
 import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -41,6 +41,8 @@ public class SysUserDto implements Serializable {
     private String openId;
 
     private Integer isDel;
+
+    private List<SysRoleDto> roles;
     
 
 }

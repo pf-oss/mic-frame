@@ -42,7 +42,7 @@ class MicProviderUserApplicationTests {
     @Test
     void update(){
         SysUser sysUser = new SysUser();
-        sysUser.setId(19);
+        sysUser.setId(19L);
         sysUserDao.updateById(sysUser);
 
     }

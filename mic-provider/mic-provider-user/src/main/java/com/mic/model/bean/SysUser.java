@@ -1,6 +1,8 @@
 package com.mic.model.bean;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,7 +19,7 @@ import java.util.Date;
 public class SysUser implements Serializable {
 
     @TableId(type = IdType.AUTO)
-    private Integer id;
+    private Long id;
     
     private String username;
     
@@ -31,14 +33,18 @@ public class SysUser implements Serializable {
     
     private Integer sex;
     
-    private Integer enabled;
+    private Boolean enabled;
     
     private String type;
 
     @TableField(fill = FieldFill.INSERT)
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     @TableField(fill = FieldFill.UPDATE)
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
     
     private String company;

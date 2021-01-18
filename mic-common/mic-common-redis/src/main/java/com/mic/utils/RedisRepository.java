@@ -2,6 +2,8 @@ package com.mic.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.serializer.RedisSerializer;
+
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -13,11 +15,9 @@ import java.util.concurrent.TimeUnit;
  */       
 @Slf4j
 public class RedisRepository {
-    
-    /**
-     * Spring Redis Template
-     */
+
     private RedisTemplate<String, Object> redisTemplate;
+
     private RedisTemplate<String, String> stringRedisTemplate;
 
     public RedisRepository(RedisTemplate<String, Object> redisTemplate,  RedisTemplate<String, String> stringRedisTemplate) {
@@ -476,7 +476,7 @@ public class RedisRepository {
      * @param value 数据
      * @return 存入的个数
      */
-    public  long lPush(final String key, final Object value) {
+    public  long rPush(final String key, final Object value) {
         Long count = redisTemplate.opsForList().rightPush(key, value);
         return count == null ? 0 : count;
     }
@@ -503,5 +503,41 @@ public class RedisRepository {
     public  long lPushAll(final String key, final Object... values) {
         Long count = redisTemplate.opsForList().rightPushAll(key, values);
         return count == null ? 0 : count;
+    }
+
+    /**
+     * redis List 引擎
+     *
+     * @return the list operations
+     */
+    public ListOperations<String, Object> opsForList() {
+        return redisTemplate.opsForList();
+    }
+
+    /**
+     * redis List数据结构 : 返回列表 key 的长度 ; 如果 key 不存在，则 key 被解释为一个空列表，返回 0 ; 如果 key 不是列表类型，返回一个错误。
+     *
+     * @param key the key
+     * @return the long
+     */
+    public Long length(String key) {
+        return opsForList().size(key);
+    }
+
+    /**
+     * redis List数据结构 : 返回列表 key 中指定区间内的元素，区间以偏移量 start 和 end 指定。
+     *
+     * @param key   the key
+     * @param start the start
+     * @param end   the end
+     * @return the list
+     */
+    public List<Object> getList(String key, int start, int end) {
+        return redisTemplate.opsForList().range(key,start,end);
+    }
+
+
+    public void listLrem(String key, int start, Object object) {
+        redisTemplate.opsForList().remove(key, start, object);
     }
 }

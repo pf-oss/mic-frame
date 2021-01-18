@@ -7,4 +7,17 @@
         <result property="menuId" column="menu_id" jdbcType="INTEGER"/>
     </resultMap>
 
+    <select id="findMenusByRoleIds" resultType="com.mic.model.bean.SysMenu">
+        select distinct t.* from sys_menu t
+        inner join sys_role_menu r on r.menu_id = t.id
+        where r.role_id in
+        <foreach collection="roleIds" index="index" item="roleId"
+                 open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+        <if test="type != null">
+            and t.type = #{type}
+        </if>
+        ORDER BY sort ASC
+    </select>
 </mapper>

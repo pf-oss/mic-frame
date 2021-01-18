@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.mic.config.SecurityPropertiesConfig,\
+com.mic.store.AuthDbTokenStore,\
+com.mic.store.AuthRedisTokenStore,\
+com.mic.store.AuthJwtTokenStore,\
+com.mic.store.ResJwtTokenStore,\
+  com.mic.config.TenantPropertiesConfig,\
+  com.mic.store.AuthRedisTokenStoreJson

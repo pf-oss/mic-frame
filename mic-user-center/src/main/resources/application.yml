@@ -2,6 +2,11 @@ server:
   port: 8092
 
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mic-frame?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
   application:
     name: mic-user-center
   cloud:
@@ -27,3 +32,21 @@ feign:
     connection-timeout: 1
   okhttp:
     enabled: true
+
+encrypt:
+  key-store:
+    location: classpath:zlt.jks
+    secret: zlt!@#$
+    alias: zlt
+mic:
+  oauth2:
+    token:
+      store:
+        type: redisAndJson
+
+  tenant:
+    enable: false
+    ignore-tables:
+      - oauth_client_details
+
+

@@ -3,6 +3,9 @@ package com.mic.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mic.model.bean.SysMenu;
 
+import java.util.List;
+import java.util.Set;
+
 /**
  * @Description:
  * @author: pf
@@ -10,6 +13,11 @@ import com.mic.model.bean.SysMenu;
  */
 public interface SysMenuService extends IService<SysMenu> {
 
-
+    /**
+     * 角色菜单列表
+     * @param roleCodes
+     * @return
+     */
+    List<SysMenu> findByRoleCodes(Set<String> roleCodes, Integer type);
 
 }

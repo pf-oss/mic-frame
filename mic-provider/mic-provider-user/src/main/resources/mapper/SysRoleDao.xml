@@ -12,4 +12,9 @@
     </resultMap>
 
 
+    <select id="findRolesByUserId" resultType="com.mic.model.bean.SysRole">
+		select r.* from sys_role r
+		inner join sys_role_user ru on r.id = ru.role_id and ru.user_id = #{userId}
+	</select>
+
 </mapper>

@@ -6,30 +6,116 @@ spring:
   application:
     name: mic-gateway
   cloud:
-    ## nacos ÅäÖÃ
+    ## nacos é…ç½®
     nacos:
       discovery:
         service: ${spring.application.name}
         server-addr: 127.0.0.1:8848
 
-    ## gatewayÅäÖÃ
+    ## gatewayé…ç½®
     gateway:
-      # Â·ÓÉÅäÖÃÏî£¬¶ÔÓ¦ RouteDefinition Êı×é
+      # è·¯ç”±é…ç½®é¡¹ï¼Œå¯¹åº” RouteDefinition æ•°ç»„
       routes:
-      - id: mic-user-center # Â·ÓÉµÄ±àºÅ
-        uri: lb://mic-user-center # Â·ÓÉµ½µÄÄ¿±êµØÖ·
-        predicates: # ¶ÏÑÔ£¬×÷ÎªÂ·ÓÉµÄÆ¥ÅäÌõ¼ş£¬¶ÔÓ¦ RouteDefinition Êı×é
+      - id: mic-user-center # è·¯ç”±çš„ç¼–å·
+        uri: lb://mic-provider-user # è·¯ç”±åˆ°çš„ç›®æ ‡åœ°å€
+        predicates: # æ–­è¨€ï¼Œä½œä¸ºè·¯ç”±çš„åŒ¹é…æ¡ä»¶ï¼Œå¯¹åº” RouteDefinition æ•°ç»„
         - Path=/query/demo/test
         filters:
         - StripPrefix=1
-      - id: oschina # Â·ÓÉµÄ±àºÅ
-        uri: lb://mic-provider-user # Â·ÓÉµÄÄ¿±êµØÖ·
-        predicates: # ¶ÏÑÔ£¬×÷ÎªÂ·ÓÉµÄÆ¥ÅäÌõ¼ş£¬¶ÔÓ¦ RouteDefinition Êı×é
+      - id: oschina # è·¯ç”±çš„ç¼–å·
+        uri: lb://mic-provider-user # è·¯ç”±çš„ç›®æ ‡åœ°å€
+        predicates: # æ–­è¨€ï¼Œä½œä¸ºè·¯ç”±çš„åŒ¹é…æ¡ä»¶ï¼Œå¯¹åº” RouteDefinition æ•°ç»„
         - Path=/query/test/getUser
-        filters: # ¹ıÂËÆ÷£¬¶ÔÇëÇó½øĞĞÀ¹½Ø£¬ÊµÏÖ×Ô¶¨ÒåµÄ¹¦ÄÜ£¬¶ÔÓ¦ FilterDefinition Êı×é
+        filters: # è¿‡æ»¤å™¨ï¼Œå¯¹è¯·æ±‚è¿›è¡Œæ‹¦æˆªï¼Œå®ç°è‡ªå®šä¹‰çš„åŠŸèƒ½ï¼Œå¯¹åº” FilterDefinition æ•°ç»„
         - StripPrefix=1
+      - id: auth
+        uri: lb://mic-provider-user
+        predicates:
+          - Path=/api-uaa/**
+        filters:
+          - StripPrefix=1
+          - PreserveHostHeader
+      - id: auth-login-page
+        uri: lb://mic-user-center
+        predicates:
+          - Path=/login.html
+        filters:
+          - PreserveHostHeader
+      - id: auth-login-process
+        uri: lb://mic-user-center
+        predicates:
+         - Path=/user/login
+        filters:
+          - PreserveHostHeader
+      - id: auth-login-token
+        uri: lb://mic-user-center
+        predicates:
+          - Path=/oauth/token
+        filters:
+          - PreserveHostHeader
+      - id: auth-login-authorize
+        uri: lb://mic-user-center
+        predicates:
+          - Path=/oauth/authorize
+        filters:
+          - PreserveHostHeader
+      - id: auth-check-process
+        uri: lb://mic-user-center
+        predicates:
+          - Path=/oauth/check_token
+        filters:
+          - PreserveHostHeader
+      - id: user
+        uri: lb://mic-user-center
+        predicates:
+          - Path=/api-user/**
+        filters:
+          - StripPrefix=1
 
-logging:
-  level:
-    reactor.netty: DEBUG
-    org.springframework.cloud.gateway: INFO   # TRACE
+  main:
+    allow-bean-definition-overriding: true
+
+mic:
+  swagger-agg:
+    generate-routes: user,file
+  oauth2:
+    token:
+      store:
+        type: redisAndJson
+  security:
+    ignore:
+      # å¿½ç•¥è®¤è¯çš„åœ°å€
+      httpUrls: >
+        /api-uaa/oauth/**,
+        /api-uaa/validata/**,
+        /api-uaa/css/**,
+        /api-uaa/images/**,
+        /api-uaa/js/**,
+        /login.html,
+        /user/login
+    auth:
+      urlPermission:
+        #æ˜¯å¦å¼€å¯urlçº§åˆ«æƒé™
+        enable: false
+        #é…ç½®åªè¿›è¡Œç™»å½•è®¤è¯ï¼Œä¸è¿›è¡Œurlæƒé™è®¤è¯çš„api
+        ignoreUrls: >
+          /api-user/menus/current,
+          /api-user/users/current,
+          /api-log/requestStat
+        #ç™½åå•
+        includeClientIds:
+        - webApp
+      renew:
+        #æ˜¯å¦å¼€å¯tokenè‡ªåŠ¨ç»­ç­¾ï¼ˆç›®å‰åªæœ‰rediså®ç°ï¼‰
+        enable: true
+        #ç™½åå•
+        includeClientIds:
+        - webApp
+  tenant:
+    ignore-sqls:
+
+#
+#logging:
+#  level:
+#    reactor.netty: DEBUG
+#    org.springframework.cloud.gateway: INFO   # TRACE

@@ -27,14 +27,17 @@ public class TestController {
 
     @GetMapping("/test")
     public String getUser() {
+        redisRepository.set("1", userService.getUser());
+
        return JSON.toJSONString(userService.getUser());
     }
 
 
     @GetMapping("/redis")
     public String getRedis() {
-        redisRepository.setStr("1", "张三");
-       return redisRepository.getStr("1");
+//        redisRepository.setStr("1", "张三");
+//       return redisRepository.getStr("1");
+       return JSON.toJSONString(redisRepository.get("1"));
     }
 
 

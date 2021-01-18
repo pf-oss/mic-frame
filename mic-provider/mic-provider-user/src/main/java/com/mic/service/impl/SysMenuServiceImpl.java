@@ -6,6 +6,8 @@ import com.mic.model.bean.SysMenu;
 import com.mic.service.SysMenuService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -19,5 +21,10 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuDao, SysMenu> impleme
     @Resource
     private SysMenuDao sysMenuDao;
 
+
+    @Override
+    public List<SysMenu> findByRoleCodes(Set<String> roleCodes, Integer type) {
+        return sysMenuDao.findMenusByRoleCodes(roleCodes, type);
+    }
 
 }

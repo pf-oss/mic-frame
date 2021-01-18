@@ -16,7 +16,7 @@ import java.util.Date;
 @Data
 public class SysRole implements Serializable {
 
-    private Integer id;
+    private Long id;
     
     /**
      * 角色code
