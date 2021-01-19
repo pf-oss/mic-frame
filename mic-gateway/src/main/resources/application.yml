@@ -86,11 +86,11 @@ mic:
     ignore:
       # 忽略认证的地址
       httpUrls: >
-        /api-uaa/oauth/**,
-        /api-uaa/validata/**,
-        /api-uaa/css/**,
-        /api-uaa/images/**,
-        /api-uaa/js/**,
+        /api-user/oauth/**,
+        /api-user/validata/**,
+        /api-user/css/**,
+        /api-user/images/**,
+        /api-user/js/**,
         /login.html,
         /user/login
     auth:
@@ -99,9 +99,9 @@ mic:
         enable: false
         #配置只进行登录认证，不进行url权限认证的api
         ignoreUrls: >
-          /api-user/menus/current,
-          /api-user/users/current,
-          /api-log/requestStat
+          /mic-user-center/menus/current,
+          /mic-user-center/users/current,
+          /mic-user-center/requestStat
         #白名单
         includeClientIds:
         - webApp
