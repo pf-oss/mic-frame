@@ -1,6 +1,7 @@
 package com.mic.service.impl;
 
 import com.mic.utils.RedisRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.code.RandomValueAuthorizationCodeServices;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
  * @create: 2021/1/14 13:39
  */
 @Service
+@Slf4j
 public class RedisAuthorizationCodeServices extends RandomValueAuthorizationCodeServices {
 
     @Autowired

@@ -1,15 +1,17 @@
 package com.mic.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.mic.constant.response.enums.ErrorCodeEnum;
+import com.mic.constant.response.enums.ErrorCodeResponseEnum;
+import com.mic.constant.response.exception.BusinessException;
+import com.mic.constant.response.model.Result;
 import com.mic.service.UserService;
 import com.mic.utils.RedisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.annotation.Resource;
-import java.util.PriorityQueue;
 
 /**
  * @Description:
@@ -40,6 +42,13 @@ public class TestController {
 //       return redisRepository.getStr("1");
        return JSON.toJSONString(redisRepository.get("1"));
     }
+
+    @GetMapping("/exceptionTest")
+    public Result<Object> exceptionTest() {
+        ErrorCodeResponseEnum.GL99990100.businessException();
+        return null;
+    }
+
 
 
 
