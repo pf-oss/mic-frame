@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/mic-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-gateway/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-provider-api/mic-provider-user-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mic-provider/mic-provider-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-provider/mic-provider-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-provider/mic-provider-user/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mic-user-center" charset="UTF-8" />

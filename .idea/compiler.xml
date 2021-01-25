@@ -15,6 +15,7 @@
         <module name="mic-common-security-core" />
         <module name="mic-common-swagger" />
         <module name="mic-gateway" />
+        <module name="mic-provider-search" />
         <module name="mic-provider-user" />
         <module name="mic-provider-user-api" />
         <module name="mic-user-center" />
@@ -34,6 +35,7 @@
       <module name="mic-gateway" target="1.8" />
       <module name="mic-provider" target="1.5" />
       <module name="mic-provider-api" target="1.5" />
+      <module name="mic-provider-search" target="1.8" />
       <module name="mic-provider-user" target="1.8" />
       <module name="mic-provider-user-api" target="1.8" />
       <module name="mic-user-center" target="1.8" />

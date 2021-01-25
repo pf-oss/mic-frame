@@ -2,22 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common.iml" filepath="$PROJECT_DIR$/mic-common/mic-common.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-base/mic-common-base.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-base/mic-common-base.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-db/mic-common-db.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-db/mic-common-db.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-elasticsearch/mic-common-elasticsearch.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-elasticsearch/mic-common-elasticsearch.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-log/mic-common-log.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-log/mic-common-log.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-redis/mic-common-redis.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-redis/mic-common-redis.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-ribbon/mic-common-ribbon.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-ribbon/mic-common-ribbon.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-security-core/mic-common-security-core.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-security-core/mic-common-security-core.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-swagger/mic-common-swagger.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-swagger/mic-common-swagger.iml" group="mic-common and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-frame.iml" filepath="$PROJECT_DIR$/mic-frame.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mic-gateway/mic-gateway.iml" filepath="$PROJECT_DIR$/mic-gateway/mic-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider.iml" group="mic-provider and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-provider-api/mic-provider-api.iml" filepath="$PROJECT_DIR$/mic-provider-api/mic-provider-api.iml" group="mic-provider-api and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider-user/mic-provider-user.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider-user/mic-provider-user.iml" group="mic-provider and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-provider-api/mic-provider-user-api/mic-provider-user-api.iml" filepath="$PROJECT_DIR$/mic-provider-api/mic-provider-user-api/mic-provider-user-api.iml" group="mic-provider-api and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mic-user-center/mic-user-center.iml" filepath="$PROJECT_DIR$/mic-user-center/mic-user-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common.iml" filepath="$PROJECT_DIR$/mic-common/mic-common.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-base/mic-common-base.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-base/mic-common-base.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-db/mic-common-db.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-db/mic-common-db.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-elasticsearch/mic-common-elasticsearch.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-elasticsearch/mic-common-elasticsearch.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-log/mic-common-log.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-log/mic-common-log.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-redis/mic-common-redis.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-redis/mic-common-redis.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-ribbon/mic-common-ribbon.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-ribbon/mic-common-ribbon.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-security-core/mic-common-security-core.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-security-core/mic-common-security-core.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-common/mic-common-swagger/mic-common-swagger.iml" filepath="$PROJECT_DIR$/mic-common/mic-common-swagger/mic-common-swagger.iml" group="mic-frame and modules/mic-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-frame.iml" filepath="$PROJECT_DIR$/mic-frame.iml" group="mic-frame and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-gateway/mic-gateway.iml" filepath="$PROJECT_DIR$/mic-gateway/mic-gateway.iml" group="mic-frame and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider.iml" group="mic-frame and modules/mic-provider and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider-api/mic-provider-api.iml" filepath="$PROJECT_DIR$/mic-provider-api/mic-provider-api.iml" group="mic-frame and modules/mic-provider-api and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider-search/mic-provider-search.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider-search/mic-provider-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider/mic-provider-user/mic-provider-user.iml" filepath="$PROJECT_DIR$/mic-provider/mic-provider-user/mic-provider-user.iml" group="mic-frame and modules/mic-provider and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-provider-api/mic-provider-user-api/mic-provider-user-api.iml" filepath="$PROJECT_DIR$/mic-provider-api/mic-provider-user-api/mic-provider-user-api.iml" group="mic-frame and modules/mic-provider-api and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mic-user-center/mic-user-center.iml" filepath="$PROJECT_DIR$/mic-user-center/mic-user-center.iml" group="mic-frame and modules" />
     </modules>
   </component>
 </project>
