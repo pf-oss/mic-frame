@@ -1,10 +1,9 @@
 package com.mic.constant.constant;
 
 /**
- * 全局公共常量
- *
- * @author zlt
- * @date 2018/10/29
+ * @Description:  全局公共常量
+ * @author: pf
+ * @create: 2021/1/27 11:12
  */
 public interface CommonConstant {
     /**

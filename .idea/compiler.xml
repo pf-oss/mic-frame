@@ -22,7 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mic-common" target="1.5" />
+      <module name="mic-common" target="1.8" />
       <module name="mic-common-base" target="1.8" />
       <module name="mic-common-db" target="1.8" />
       <module name="mic-common-elasticsearch" target="1.8" />
@@ -31,10 +31,10 @@
       <module name="mic-common-ribbon" target="1.8" />
       <module name="mic-common-security-core" target="1.8" />
       <module name="mic-common-swagger" target="1.8" />
-      <module name="mic-frame" target="1.5" />
+      <module name="mic-frame" target="1.8" />
       <module name="mic-gateway" target="1.8" />
-      <module name="mic-provider" target="1.5" />
-      <module name="mic-provider-api" target="1.5" />
+      <module name="mic-provider" target="1.8" />
+      <module name="mic-provider-api" target="1.8" />
       <module name="mic-provider-search" target="1.8" />
       <module name="mic-provider-user" target="1.8" />
       <module name="mic-provider-user-api" target="1.8" />

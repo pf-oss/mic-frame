@@ -1,10 +1,9 @@
 package com.mic.constant.constant;
 
 /**
- * 配置项常量
- *
- * @author zlt
- * @date 2019/9/3
+ * @Description:  配置项常量
+ * @author: pf
+ * @create: 2021/1/27 11:12
  */
 public interface ConfigConstants {
     /**

@@ -1,10 +1,10 @@
 package com.mic.constant.constant;
 
+
 /**
- * 服务名称常量
- *
- * @author zlt
- * @date 2018/7/27 13:50
+ * @Description:  服务名称常量
+ * @author: pf
+ * @create: 2021/1/27 11:13
  */
 public interface ServiceNameConstants {
 
