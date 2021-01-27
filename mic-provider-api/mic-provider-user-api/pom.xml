@@ -17,7 +17,7 @@
 
     <groupId>com.mic</groupId>
     <artifactId>mic-provider-user-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>mic-provider-user-api</name>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
@@ -67,13 +67,11 @@
         <dependency>
             <groupId>com.mic</groupId>
             <artifactId>mic-common-base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.mic</groupId>
             <artifactId>mic-common-ribbon</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
