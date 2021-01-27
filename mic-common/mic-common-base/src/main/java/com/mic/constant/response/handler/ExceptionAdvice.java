@@ -20,7 +20,6 @@ import java.sql.SQLException;
  * @create: 2021/1/19 14:16
  */
 @ResponseBody
-@ControllerAdvice
 @Slf4j
 public class ExceptionAdvice {
     /**
