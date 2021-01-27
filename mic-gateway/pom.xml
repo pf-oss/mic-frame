@@ -9,7 +9,7 @@
         <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     <!--</parent>-->
     <parent>
-        <groupId>mic-frame</groupId>
+        <groupId>mic.frame</groupId>
         <artifactId>mic-frame</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -47,6 +47,12 @@
             <groupId>com.mic</groupId>
             <artifactId>mic-common-base</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>javax.servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>

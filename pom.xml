@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>mic-frame</groupId>
+    <groupId>mic.frame</groupId>
     <artifactId>mic-frame</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>

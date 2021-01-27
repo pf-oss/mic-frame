@@ -10,7 +10,7 @@
     <!--</parent>-->
 
     <parent>
-        <groupId>mic-frame</groupId>
+        <groupId>mic.frame</groupId>
         <artifactId>mic-frame</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
