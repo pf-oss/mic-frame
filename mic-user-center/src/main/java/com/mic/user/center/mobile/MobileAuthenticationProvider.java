@@ -27,8 +27,7 @@ public class MobileAuthenticationProvider implements AuthenticationProvider {
         MobileAuthenticationToken authenticationToken = (MobileAuthenticationToken) authentication;
         String mobile = (String) authenticationToken.getPrincipal();
         String password = (String) authenticationToken.getCredentials();
-//        UserDetails user = userDetailsService.loadUserByMobile(mobile);
-        UserDetails user = userDetailsService.loadUserByUsername(mobile);
+        UserDetails user = userDetailsService.loadUserByMobile(mobile);
         if (user == null) {
             throw new InternalAuthenticationServiceException("手机号或密码错误");
         }
