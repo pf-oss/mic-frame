@@ -15,15 +15,4 @@
         <module>mic-provider-user</module>
     </modules>
 
-    <!--<dependencies>-->
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/com.alibaba/fastjson &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>fastjson</artifactId>-->
-            <!--<version>1.2.75</version>-->
-        <!--</dependency>-->
-    <!--</dependencies>-->
-
-
-
 </project>
