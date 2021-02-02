@@ -40,12 +40,12 @@ public class UserDetailServiceImpl implements MicUserDetailsService, SocialUserD
         LoginAppUser loginAppUser = userService.findByOpenId(openId);
         return checkUser(loginAppUser);
     }
-//
-//    @Override
-//    public UserDetails loadUserByMobile(String mobile) {
-//        LoginAppUser loginAppUser = userService.findByMobile(mobile);
-//        return checkUser(loginAppUser);
-//    }
+
+    @Override
+    public UserDetails loadUserByMobile(String mobile) {
+        LoginAppUser loginAppUser = userService.findByMobile(mobile);
+        return checkUser(loginAppUser);
+    }
 
     private LoginAppUser checkUser(LoginAppUser loginAppUser) {
         if (loginAppUser != null && !loginAppUser.isEnabled()) {
