@@ -30,7 +30,6 @@
         <dependency>
             <groupId>com.mic</groupId>
             <artifactId>mic-common-elasticsearch</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -43,6 +42,26 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.mic</groupId>
+            <artifactId>mic-common-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mic</groupId>
+            <artifactId>mic-common-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mic</groupId>
+            <artifactId>mic-common-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mic</groupId>
+            <artifactId>mic-common-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mic</groupId>
+            <artifactId>mic-common-base</artifactId>
         </dependency>
     </dependencies>
 

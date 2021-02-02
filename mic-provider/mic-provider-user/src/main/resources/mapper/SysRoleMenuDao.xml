@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mic.dao.SysRoleMenuDao">
+<mapper namespace="com.mic.user.dao.SysRoleMenuDao">
 
-    <resultMap type="com.mic.model.bean.SysRoleMenu" id="SysRoleMenuMap">
+    <resultMap type="com.mic.user.model.bean.SysRoleMenu" id="SysRoleMenuMap">
         <result property="roleId" column="role_id" jdbcType="INTEGER"/>
         <result property="menuId" column="menu_id" jdbcType="INTEGER"/>
     </resultMap>
 
-    <select id="findMenusByRoleIds" resultType="com.mic.model.bean.SysMenu">
+    <select id="findMenusByRoleIds" resultType="com.mic.user.model.bean.SysMenu">
         select distinct t.* from sys_menu t
         inner join sys_role_menu r on r.menu_id = t.id
         where r.role_id in

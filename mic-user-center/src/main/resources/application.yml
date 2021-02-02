@@ -45,7 +45,7 @@ mic:
         type: redis
 
   tenant:
-    enable: false
+    enable: true
     ignore-tables:
       - oauth_client_details
 

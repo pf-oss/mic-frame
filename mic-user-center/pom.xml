@@ -103,6 +103,12 @@
         <dependency>
             <groupId>com.mic</groupId>
             <artifactId>mic-provider-user-api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-cloud-starter-security</artifactId>
+                    <groupId>org.springframework.cloud</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>

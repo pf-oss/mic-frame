@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.mic.config.MyBatisPlusConfig
+com.mic.db.config.MyBatisPlusConfig
 
 

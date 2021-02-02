@@ -21,7 +21,7 @@ pagehelper:
 
 mybatis-plus:
   mapper-locations: "classpath*:/mapper/**/*.xml"
-  type-aliases-package: com.mic.model.bean # 扫描的包路径
+  type-aliases-package: com.mic.user.model.bean # 扫描的包路径
   global-config:
     banner: false # 关闭打印mybatis-plus的LOGO
     db-config:

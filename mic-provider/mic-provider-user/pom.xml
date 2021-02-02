@@ -64,6 +64,13 @@
         <dependency>
             <groupId>com.mic</groupId>
             <artifactId>mic-provider-user-api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-cloud-starter-security</artifactId>
+                    <groupId>org.springframework.cloud</groupId>
+                </exclusion>
+            </exclusions>
+
         </dependency>
 
         <!-- 引入 Spring Cloud Alibaba Nacos Discovery 相关依赖，将 Nacos 作为注册中心，并实现对其的自动配置 -->

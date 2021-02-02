@@ -1,8 +1,9 @@
 package com.mic;
 
 import com.alibaba.fastjson.JSON;
-import com.mic.dao.SysUserDao;
-import com.mic.model.bean.SysUser;
+
+import com.mic.user.dao.SysUserDao;
+import com.mic.user.model.bean.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
