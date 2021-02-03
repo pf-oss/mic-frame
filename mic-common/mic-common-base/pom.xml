@@ -21,7 +21,6 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>transmittable-thread-local</artifactId>
-            <!--<version>2.12.0</version>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.social/spring-social-security -->
@@ -35,14 +34,12 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <!--<version>30.1-jre</version>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <!--<version>1.8.0-beta2</version>-->
         </dependency>
 
         <dependency>
@@ -53,7 +50,6 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <!--<version>2.9.9</version>-->
             <scope>compile</scope>
         </dependency>
 
