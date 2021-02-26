@@ -1,15 +1,14 @@
 package com.mic.user.center.config;
 
-import com.mic.security.config.DefaultPasswordConfig;
 import com.mic.base.constant.SecurityConstants;
+import com.mic.security.config.DefaultPasswordConfig;
+import com.mic.security.properties.TenantProperties;
 import com.mic.user.center.filter.LoginProcessSetTenantFilter;
 import com.mic.user.center.handler.OauthLogoutSuccessHandler;
 import com.mic.user.center.mobile.MobileAuthenticationSecurityConfig;
 import com.mic.user.center.openid.OpenIdAuthenticationSecurityConfig;
-import com.mic.security.properties.TenantProperties;
 import com.mic.user.center.tenant.TenantAuthenticationSecurityConfig;
 import com.mic.user.center.tenant.TenantUsernamePasswordAuthenticationFilter;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,7 +37,6 @@ import javax.annotation.Resource;
  */
 @Configuration
 @Import(DefaultPasswordConfig.class)
-@Slf4j
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -70,6 +68,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private TenantProperties tenantProperties;
+
 
 	/**
 	 * 这一步的配置是必不可少的，否则SpringBoot会自动配置一个AuthenticationManager,覆盖掉内存中的用户
@@ -112,7 +111,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
 				// 解决不允许显示在iframe的问题
 				.headers().frameOptions().disable().cacheControl();
-
 
 		if (tenantProperties.getEnable()) {
 			//解决不同租户单点登录时角色没变化

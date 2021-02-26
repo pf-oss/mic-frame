@@ -26,7 +26,7 @@ public class UserDetailServiceImpl implements MicUserDetailsService, SocialUserD
     private UserService userService;
 
     @Override
-    @JsonIgnore
+//    @JsonIgnore
     public UserDetails loadUserByUsername(String username) {
         LoginAppUser loginAppUser = userService.findByUsername(username);
         if (loginAppUser == null) {

@@ -19,9 +19,9 @@ import javax.annotation.Resource;
 
 
 /**
- * OAuth2 授权服务器配置
+ * @Description:  OAuth2 授权服务器配置
  * @author: pf
- * @create: 2021/1/14 15:58
+ * @create: 2021/2/26 10:04
  */
 @Configuration
 @EnableAuthorizationServer
